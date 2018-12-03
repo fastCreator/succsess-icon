@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <style>
+    .jw-icon-success {
+      border: 4px solid #bbf2d3;
+      border-radius: 100%;
+      width: 100px;
+      height: 100px;
+      position: relative;
+
+    }
+
+    .jw-icon-success:before {
+      content: "";
+      animation: beforemove1 0.5s linear 0s 1 normal, beforemove2 0.5s linear 0.5s 1 normal;
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 4px solid #0dcd66;
+      border-radius: 100% 0 0 0;
+      border-right: none;
+      border-bottom: none;
+      transform-origin: 100% 100%;
+      animation-fill-mode: forwards;
+    }
+
+    .jw-icon-success:after {
+      content: "";
+      animation: afterremove1 0.5s linear 0s 1 normal, afterremove2 0.5s linear 1s 1 normal;
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 4px solid #bbf2d3;
+      border-radius: 100% 0 0 0;
+      border-right: none;
+      border-bottom: none;
+      transform-origin: 100% 100%;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes beforemove1 {
+      0% {
+        transform: rotate(90deg);
+      }
+      100% {
+        transform: rotate(-70deg);
+      }
+    }
+
+    @keyframes beforemove2 {
+      0% {
+        border-top: 0;
+        border-radius: 0;
+        transform-origin: 0 0;
+        transform: rotate(-45deg) translate(-24px, 30px);
+        height: 0px;
+      }
+      100% {
+        border-top: 0;
+        border-radius: 0;
+        transform-origin: 0 0;
+        transform: rotate(-45deg) translate(-24px, 50px);
+        height: 36px;
+      }
+    }
+
+    @keyframes afterremove1 {
+      0% {
+        transform: rotate(45deg);
+      }
+      100% {
+        transform: rotate(-70deg);
+      }
+    }
+
+    @keyframes afterremove2 {
+      0% {
+        transform: rotate(-45deg) translate(-24px, 84px);
+        border: 4px solid #0dcd66;
+        border-radius: 0;
+        border-top: none;
+        height: 0px;
+        transform-origin: 0 0;
+        width: 0px;
+      }
+      100% {
+        transform: rotate(-45deg) translate(-24px, 84px);
+        border: 4px solid #0dcd66;
+        border-radius: 0;
+        border-top: none;
+        height: 0px;
+        transform-origin: 0 0;
+        width: 54px;
+      }
+    }
+  </style>
+  <div class="jw-icon-success"></div>
+
+</html>
